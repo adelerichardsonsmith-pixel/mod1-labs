@@ -3,28 +3,16 @@ package lab3;
 import java.util.Scanner;
 
 public class WeightConversions {
-	
-    public static String getString(String prompt) {
-        System.out.println(prompt);
-        Scanner s = new Scanner(System.in);
-        String result = s.nextLine();
-        return result;
-        
-    }
 
-    public static int getInt(String prompt) {
-        System.out.println(prompt);
-        Scanner s = new Scanner(System.in);
-        int result = s.nextInt();
-        return result;
-    }
 
 	public static void main(String[] args) {
+		
+		Utils utils = new Utils();
 
-	    int weightInPounds = getInt("What is your weight in pounds?");
+	    int weightInPounds = utils.getInt("What is your weight in pounds?");
 	    convertInputToStonesPounds(weightInPounds);
 	    
-	    int weightInKilograms = getInt("What is your weight in kilograms?");
+	    int weightInKilograms = utils.getInt("What is your weight in kilograms?");
 	    convertKilogramsToStonesPounds(weightInKilograms);
 		
 	}
@@ -44,7 +32,20 @@ public class WeightConversions {
         System.out.println(weightInKilograms + " kg is equivalent to " + stones + " st " + remainingPounds + " lbs.");
 	}
 	
-	
+//  public static String getString(String prompt) {
+//  System.out.println(prompt);
+//  Scanner s = new Scanner(System.in);
+//  String result = s.nextLine();
+//  return result;
+//  
+//}
+//
+//public static int getInt(String prompt) {
+//  System.out.println(prompt);
+//  Scanner s = new Scanner(System.in);
+//  int result = s.nextInt();
+//  return result;
+//}
 	
     
 
