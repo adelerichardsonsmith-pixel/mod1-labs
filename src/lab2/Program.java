@@ -3,29 +3,20 @@ package lab2;
 public class Program {
 
 	public static void main(String[] args) {
-		
-		int grade = -11;
-		
-		if (grade < 1 || grade > 100) {
-			System.out.println("Error: marks must be between 1 and 100");
-		}
-		else {
-		
-		if ( grade > 71) {
-			System.out.println("Dinstinction");
-		}
-		else if ( grade > 61) {
-			System.out.println("Merit");
-		}
-		else if ( grade > 50) {
-			System.out.println("Pass");
-		}
-		else {
-			System.out.println("Fail");
-		}
-		}
-		
 
+
+			
+	        Account myAccount = new Account(12345, "Marie", 700.00);
+
+	        myAccount.deposit(50.00);
+//	        myAccount.deposit(-20.00);
+	        
+	        myAccount.withdraw(30.00);
+//			myAccount.withdraw(900.00);
+
+			System.out.println(myAccount.getDetails());
+	    
+	
 	}
 
 }

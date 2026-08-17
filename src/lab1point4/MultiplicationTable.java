@@ -1,4 +1,4 @@
-package lab4;
+package lab1point4;
 
 public class MultiplicationTable {
 
