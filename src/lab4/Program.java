@@ -5,7 +5,8 @@ public class Program {
 	public static void main(String[] args) {
 		
 		int[] numbers = {1, 3, -5, 7, 0, 4, 6, 8 };
-		printArray(numbers);
+//		printArray(numbers);
+		
 		int sum = 0;
 	    int average = (int) sum / numbers.length;
         int min = numbers[0];
@@ -39,6 +40,6 @@ public class Program {
         System.out.println("Index of 0:" + zero);
 	}
 	
-	public static void printArray(int[] arr) {
-	}
+//	public static void printArray(int[] arr) {
+//	}
 }
