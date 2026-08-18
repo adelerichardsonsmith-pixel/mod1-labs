@@ -1,4 +1,4 @@
-package lab1point4;
+package lab1d;
 
 public class Account {
 	

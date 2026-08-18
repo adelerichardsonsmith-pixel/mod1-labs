@@ -1,4 +1,4 @@
-package lab1point2;
+package lab1b;
 
 public class Program {
 

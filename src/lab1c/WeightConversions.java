@@ -1,4 +1,4 @@
-package lab1point3;
+package lab1c;
 
 import java.util.Scanner;
 

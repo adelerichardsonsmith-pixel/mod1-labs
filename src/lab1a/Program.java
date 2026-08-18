@@ -1,4 +1,4 @@
-package lab1point1;
+package lab1a;
 
 public class Program {
     public static void main(String[] args) {
