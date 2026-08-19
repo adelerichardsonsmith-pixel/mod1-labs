@@ -26,8 +26,24 @@ public class Game extends Canvas {
         frame.pack();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
-                
-//        Ball.setWorld(WIDTH, HEIGHT);
+        
+//        JButton btnL = new JButton("L");
+//		btnL.setBounds(10, 325, 100, 30);
+//		frame.add(btnL);
+//
+//
+//		JButton btnR = new JButton("R");
+//		btnR.setBounds(150, 325, 100, 30);
+//		frame.add(btnR);
+//
+//
+//		btnR.addActionListener(e -> {
+//			manager.moveRight(10);
+//		});
+//		btnL.addActionListener(e -> {
+//			manager.moveLeft(10);
+//		});
+               
         
         Timer t = new Timer();
         TimerTask tt = new TimerTask() {
