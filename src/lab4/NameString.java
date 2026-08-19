@@ -6,25 +6,19 @@ public class NameString {
 
 		String name = "Adele";
 		System.out.println(name);
-		System.out.println();
 		System.out.println(name.charAt(3));
-		System.out.println();
 		System.out.println(name.toUpperCase());
-		System.out.println();
 		System.out.println(name.toLowerCase());
-		System.out.println();
 		for (char c : name.toCharArray() ) {
-			System.out.println(c + "\t");
+			System.out.print(c + "\t");
 		}
 		System.out.println();
 		System.out.println(name.startsWith("Geoff"));
 		System.out.println(name.startsWith("Ad"));
 		System.out.println(name.endsWith("Geoff"));
 		System.out.println(name.endsWith("le"));
-		System.out.println();
 		System.out.println(name.indexOf("e"));
 		System.out.println(name.indexOf("p"));
-		System.out.println();
 		String fullname = name + " " + "Smith";
 		System.out.println(fullname);
 		System.out.println();
