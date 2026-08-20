@@ -7,7 +7,7 @@ public class Vehicle {
 	RegistrationPlate registrationPlate;
 	
 	
-	public Vehicle(int lane) {
+	public Vehicle(int lane) throws RegistrationPlatesException {
 		this.speed = 0;
 		this.lane = lane;
 		this.distanceTravelled = 0;

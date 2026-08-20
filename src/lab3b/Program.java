@@ -9,9 +9,14 @@ public class Program {
 		
 		ArrayList<Vehicle> vehicles = new ArrayList<>();
 		
-		vehicles.add(new Vehicle(1));
-		vehicles.add(new Vehicle(2));
-		vehicles.add(new Vehicle(3));
+		// Wrap vehicle creation in a try-catch block
+		try {
+			vehicles.add(new Vehicle(1));
+			vehicles.add(new Vehicle(2));
+			vehicles.add(new Vehicle(3));
+		} catch (RegistrationPlatesException e) {
+			System.err.println("[CREATION FAILED]: " + e.getMessage());
+		}
 		
 		int getCount = vehicles.size();
 		System.out.println("Number of vehicles: " + getCount);
@@ -20,7 +25,10 @@ public class Program {
 			System.out.println(v.getDetails());
 		}	
 		
-		raceVehicles(vehicles);
+		// Only race if we successfully created vehicles
+		if (!vehicles.isEmpty()) {
+			raceVehicles(vehicles);
+		}
 	} 
 	
 	public static void raceVehicles(ArrayList<Vehicle> vehicles) {
@@ -29,22 +37,18 @@ public class Program {
 		int turn = 1;
 		
 		while (!raceFinished) {
-			
 			for (Vehicle v : vehicles) {
-				int n = rand.nextInt(10)+1;
+				int n = rand.nextInt(10) + 1;
 				v.accelerate(n);
 				System.out.println(v.getDetails());
 
 				if (v.distanceTravelled > 1000) {
-					System.out.println("Vehicle: " + v.registrationPlate.getNumber() + "wins, distance travelled: " + v.distanceTravelled);
+					System.out.println("Vehicle: " + v.registrationPlate.getNumber() + " wins, distance travelled: " + v.distanceTravelled);
 					raceFinished = true;
 					break;
 				}
 			}
-			turn ++;
-
+			turn++;
 		}
-		
-
 	}
 }
