@@ -9,7 +9,7 @@ public class Program2 {
 
 	public static void main(String[] args) throws Exception{
 		Gson gson = new Gson();
-		String fileName = "customers.json";
+		String fileName = "/Users/adelerichardson-smith/eclipse-workspace/mod1_2025-main/Resources/customers.json";
 		String content = new String(Files.readAllBytes(Paths.get(fileName)));
 		Customer[] customers = gson.fromJson(content, Customer[].class);
 		System.out.println("Customer List (" + customers.length + " total)");
