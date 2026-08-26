@@ -3,7 +3,7 @@ package lab15;
 public class Counter {
 	private int value = 0;
 	
-	public void increment() {
+	public synchronized void increment() {
 		value++;
 	}
 	

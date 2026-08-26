@@ -18,5 +18,6 @@ module labs {
 	requires java.desktop;
 	requires java.sql;
 	requires gson;
+	requires jdk.compiler;
 	opens lab12;
 }
