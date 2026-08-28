@@ -1,0 +1,172 @@
+BrokenAuditApp Change list
+--------------------------
+
+## Main Issues
+
+These are the priority fixes. Get these working before moving on to the smaller improvements.
+
+1. **Datetime per event**  //Done 
+
+   * Each audit event should get its own timestamp.
+   * Do not create one timestamp and reuse it for the whole batch.
+
+2. **One event per line**  //Done
+
+   * Each audit event should be written as a separate line in the log file.
+   * Check the actual output file after running the program.
+
+3. **Append-only logging** //Done
+
+   * Running the program again should add new events to the existing log.
+   * Existing audit records must not be overwritten.
+
+4. **Standardised timestamp** //Done
+
+   * Use a consistent ISO-style timestamp.
+   * Use UTC / Zulu time rather than the machine's local time.
+   * Research Java's `Instant` and ISO-8601 formatting.
+
+---
+
+## Minor Issues
+
+Work through these once the main problems have been fixed.
+
+1. **Improve modularity** //Done
+
+   * Break the application into smaller methods.
+   * Try to give each method one clear responsibility.
+
+2. **Remove duplicated console output** //Done
+
+   * Look for messages that are printed more than once.
+
+3. **Decide on console/debug output** //Done
+
+   * Decide which messages are useful to the user.
+   * Remove unnecessary debugging output.
+
+4. **Fix Java naming conventions** //Done
+
+   * Review class, method and variable names.
+   * Java variables and methods normally use `camelCase`.
+   * Constants normally use `UPPER_SNAKE_CASE`.
+
+5. **Validate known users** //Done
+
+   * Check whether the user ID exists in the known-users data.
+   * Add something such as `known=true` or `known=false` to each log event.
+
+6. **Improve error handling**
+
+   * Avoid simply allowing `IOException` to handle every failure.
+   * Give the user a useful error message where appropriate.
+   * Consider whether the program should exit with a non-zero exit code after a serious error.
+
+7. **Add log headers**
+
+   * If using a line-based text or CSV-style log, add meaningful column/header information.
+   * Be careful not to add another header every time an existing log is opened in append mode.
+
+8. **Consider JSON output**
+
+   * Research how one audit event could be represented as JSON.
+   * Decide whether structured JSON would be better than the current plain-text format.
+
+9. **Review access levels**
+
+   * Look at the classes, methods and variables.
+   * Decide whether each one really needs to be `public`, package-private or `private`.
+
+10. **Add an event ID** //Done
+
+    * Give every audit event a unique identifier.
+    * Research Java's `UUID` class.
+
+11. **Improve file handling**
+
+    * Replace manual `close()` calls with Java's **try-with-resources** syntax.
+
+12. **Comments and Javadoc**
+
+    * Add useful comments where the reason for some code may not be obvious.
+    * Add Javadoc to important methods.
+    * Avoid comments that simply repeat what the code already says.
+
+13. **Add the team name** //Done
+
+    * Include the team name as part of every audit event rather than only displaying it on the console.
+
+---
+
+## Stretch Tasks
+
+### Replace direct file logging
+
+Research a Java logging API and investigate whether it would be more appropriate than directly writing audit records with `FileWriter`.
+
+Consider:
+
+* log levels
+* formatting
+* output destinations
+* file handling
+* configuration
+
+You do not necessarily need to completely redesign the application. Be prepared to explain what you found.
+
+### Read events from an external file
+
+Allow the program to accept an input file:
+
+```text
+--input input-file.txt
+```
+
+Then:
+
+* read event data from the supplied file
+* validate that the file exists
+* validate the incoming records
+* give useful errors for malformed data
+
+The original hard-coded events can remain available as fallback/test data.
+
+### Allow the output file to be selected
+
+Allow the user to specify where the log should be written:
+
+```text
+--output audit.log
+```
+
+For example:
+
+```text
+--input input-file.txt --output audit.log
+```
+
+Remember that the output must still be **append-only**.
+
+---
+
+## Further Stretch — Tests
+
+Add some automated tests for the application.
+
+Good starting points include:
+
+* a known user is identified correctly
+* an unknown user is identified correctly
+* a successful attempt produces the correct result
+* a failed attempt produces the correct result
+* each event receives an ID
+* each event receives its own timestamp
+* malformed input is rejected
+* valid input is accepted
+
+Start with methods that contain processing logic rather than trying to test the whole application at once.
+
+### Pointer
+
+If a method is difficult to test because it performs several unrelated jobs, that may be a sign that the method should be broken into smaller pieces.

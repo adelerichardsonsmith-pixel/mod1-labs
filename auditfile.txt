@@ -1,0 +1,17 @@
+uuid = e30b626e-4033-4130-bb04-94848b6ea353, time = 2026-08-27T13:08:58.89411Z, user = user-100, known user = KNOWN, result = OK team = AuthTeam 
+uuid = 86f88e9f-9106-45ca-8259-11ab79f8acb3, time = 2026-08-27T13:08:58.904823Z, user = user-200, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = e072b1cd-7ce1-4516-bb38-228469e864d6, time = 2026-08-27T13:08:58.905169Z, user = user-100, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = 18c3649e-0975-4ff8-8cc4-b53c94e4152c, time = 2026-08-27T13:08:58.905267Z, user = user-999, known user = UNKNOWN, result = OK team = AuthTeam 
+uuid = a19bb2dd-a31f-4fee-92a8-a52ca095c678, time = 2026-08-27T13:10:39.920342Z, user = user-100, known user = KNOWN, result = OK team = AuthTeam 
+uuid = f5e56a48-8a22-482a-9962-ec8a929a734d, time = 2026-08-27T13:10:39.924894Z, user = user-200, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = de0bf677-3289-4043-9acc-5b8e3f4b3dcc, time = 2026-08-27T13:10:39.925056Z, user = user-100, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = d7ef4cdf-73fd-4c9a-a6de-fecbefe9fe5a, time = 2026-08-27T13:10:39.925153Z, user = user-999, known user = UNKNOWN, result = OK team = AuthTeam 
+uuid = d88265d3-47f2-4a46-8a78-41fd628032ff, time = 2026-08-27T13:17:39.96007Z, user = user-100, known user = KNOWN, result = OK team = AuthTeam 
+uuid = a6a97cd1-c4bd-461e-9924-de245f3a7aea, time = 2026-08-27T13:17:39.964877Z, user = user-200, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = b74c3961-c59a-4955-83d3-5a8e98746947, time = 2026-08-27T13:17:39.964981Z, user = user-100, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = 6c659ce3-ce42-44eb-8b10-8e606dc7e826, time = 2026-08-27T13:17:39.965048Z, user = user-999, known user = UNKNOWN, result = OK team = AuthTeam 
+uuid = 907c23ac-3846-43fb-9905-12467b5b8748, time = 2026-08-27T13:33:41.102678Z, user = user-100, known user = KNOWN, result = OK team = AuthTeam 
+uuid = fcb37b85-cdad-45d0-8b05-5d0801275a72, time = 2026-08-27T13:33:41.107183Z, user = user-200, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = b61ad8ce-bb38-43dd-a287-319b796c76d6, time = 2026-08-27T13:33:41.107291Z, user = user-100, known user = KNOWN, result = NOT_OK team = AuthTeam 
+uuid = 4622ca2c-60ff-43c5-bf3d-291b8fe03416, time = 2026-08-27T13:33:41.107362Z, user = user-999, known user = UNKNOWN, result = OK team = AuthTeam 
+uuid = cced869e-d99d-4210-8e08-1f37ccf619bd, time = 2026-08-27T13:33:41.107685Z, user = user-800, known user = UNKNOWN, result = OK team = AuthTeam 
